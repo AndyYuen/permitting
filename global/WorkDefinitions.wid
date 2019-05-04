@@ -1,0 +1,166 @@
+[
+  [
+    "name" : "Email",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+  [
+    "name" : "Log",
+    "parameters" : [
+      "Message" : new StringDataType()
+    ],
+    "displayName" : "Log",
+    "icon" : "defaultlogicon.gif"
+  ],
+
+  [
+    "name" : "WebService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+         "Namespace" : new StringDataType(),
+         "Interface" : new StringDataType(),
+         "Operation" : new StringDataType(),
+         "Parameter" : new StringDataType(),
+         "Endpoint" : new StringDataType(),
+         "Mode" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "WS",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "Rest",
+    "parameters" : [
+        "ContentData" : new StringDataType(),
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+     "name" : "BusinessRuleTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "KieSessionName" : new StringDataType(),
+       "KieSessionType" : new StringDataType()
+     ],
+     "displayName" : "Business Rule Task",
+     "icon" : "defaultbusinessrulesicon.png",
+     "category" : "Decision tasks"
+   ],
+
+   [
+     "name" : "DecisionTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "Namespace" : new StringDataType(),
+       "Model" : new StringDataType(),
+       "Decision" : new StringDataType()
+     ],
+     "displayName" : "Decision Task",
+     "icon" : "defaultdecisionicon.png",
+     "category" : "Decision tasks"
+   ],
+
+   [
+    "name" : "Milestone",
+    "parameters" : [
+        "Condition" : new StringDataType()
+    ],
+    "displayName" : "Milestone",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "Milestone"
+    ],
+    
+       [
+    "name" : "RepSubmitPermitRequestService",
+    "parameters" : [
+        "applicant" : new ObjectDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "Rep Submit Permit Request Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rep Service"
+  ],
+   [
+    "name" : "RepGetPermitStatusService",
+    "parameters" : [
+        "applicationID" : new StringDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "Rep Get Permit Status Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rep Service"
+  ],
+   [
+    "name" : "RepRescindPermitService",
+    "parameters" : [
+        "applicationID" : new StringDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "Rep Rescind Permit Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rep Service"
+  ],
+   [
+    "name" : "RspSubmitPermitRequestService",
+    "parameters" : [
+        "applicant" : new ObjectDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "Rsp Submit Permit Request Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rsp Service"
+  ],
+   [
+    "name" : "RspGetPermitStatusService",
+    "parameters" : [
+        "applicationID" : new StringDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "Rsp Get Permit Status Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rsp Service"
+  ],
+   [
+    "name" : "RspRescindPermitService",
+    "parameters" : [
+        "applicationID" : new StringDataType()
+    ],
+    "results" : [
+        "result" : new StringDataType(),
+    ],
+    "displayName" : "sep Rescind Permit Service",
+    "icon" : "defaultdecisionicon.png",
+    "category": "Rsp Service"
+  ]
+]
