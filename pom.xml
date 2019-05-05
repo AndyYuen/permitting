@@ -46,7 +46,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.myspace.permitting</groupId>
+      <groupId>com.myspace</groupId>
       <artifactId>services</artifactId>
       <version>1.0</version>
     </dependency>
