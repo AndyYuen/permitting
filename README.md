@@ -130,8 +130,19 @@ Ensure you can login into business central
 
 4. Install the web UI onto EAP
 
-Use the file manager to copy the file: ~/github/permitting-ui/target/permitting-ui-1.0.war to the jboss-eap-7.2/standalone/deployment directory
-On successful installation, you will see the file: permitting-ui-1.0.war.deployed in the jboss-eap-7.2/standalone/deployment directory
+Use the file manager to copy the file: 
+```
+~/github/permitting-ui/target/permitting-ui-1.0.war
+``` 
+to the 
+```
+jboss-eap-7.2/standalone/deployment
+```
+directory. On successful installation, you will see the file: 
+```
+permitting-ui-1.0.war.deployed
+```
+ in the jboss-eap-7.2/standalone/deployment directory
 
 ## 4.6. Import permitting project into RHPAM, build and deploy
 
@@ -146,7 +157,7 @@ https://github.com/AndyYuen/permitting.git
 The email WorkItemHandler definition requires changing to you email server. Current setting is:
 ```
 new org.jbpm.process.workitem.email.EmailWorkItemHandler("mail.optusnet.com.au", "25", "hello.world@optusnet.com.au", "password", "true")
-
+```
 You need to change it to point to you mail server instead.
 
 Here is a screenshot of the Work Item Handler config:
