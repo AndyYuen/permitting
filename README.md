@@ -105,13 +105,6 @@ Ensure you can login into business central
   $ mvn clean install
   ```
 
-4. Build the datamodel and install in local maven repo
-
-  ```
-  $ cd ~/solarvillage-domain
-  $ mvn clean install
-  ```
-
 ## 4.5. Build the web UI 
 1. Change to the github repository
   ```
@@ -168,10 +161,17 @@ Here is a screenshot of the Work Item Handler config:
 
 The UI has been developed to allow the creation of new process instances and retrieve/action tasks.
 Here is a pictorial introduction to the web UI.
+Web UI Home
 ![Web UI Home](images/ui-home.png "Web UI Home")
+
+Start Process
 ![Start Process](images/ui-startProcess.png "Start Process")
+
+Show Task List
 ![Task List](images/ui-taskList.png "Task List")
-![Task Form](images/ui-taskForm.png "Task FOrm")
+
+Show Task Form to Action
+![Task Form](images/ui-taskForm.png "Task Form")
 
 A private video on the UI in action can be found in the link below.
 
