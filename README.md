@@ -1,10 +1,10 @@
 # 1. Solar Village
-This is a home work assignment
+This is a home work assignment.
 
 # 2. Environment
-This POC uses the Process Automation Manager 7.3.0.GA running on JBOSS EAP 7.2 on a VM.
+This POC uses the Red Hat Process Automation Manager (RHPAM) 7.3.0.GA running on JBOSS EAP 7.2 on a VM.
 
-It is assumed that the customer has already have such a working environment set up and operational.
+It is assumed that the customer has already set up a working RHPAM environment with Business Central and Kie-server.
 
 # 3. Scope changes
 Following the assignment story line, the Consultant had an agreement with the customer on the POC scope changes. They are:
@@ -19,7 +19,10 @@ The customer agrees to import this project from Business Central.
 
 ## 3.4 The customer will accept the cloning (from Github) of the WorkItemHandlers and a web UI, then build and deploy them on to the RHPAM environment
 The other two Github projects required to complete the POC are shown below. Follow the instructions in the links to complete the build and deploy.
-....
+
+https://github.com/AndyYuen/permitting
+https://github.com/AndyYuen/permitting-services
+https://github.com/AndyYuen/permitting-ui
 
 # 4. Setup Instructions
 ## 4.1. Set up Users
@@ -88,13 +91,14 @@ Ensure you can login into business central
 
 ## 4.4. Build the services (WorkItemHandlers)
 
+Note: The getPermitRequest Status service uses a random number to determine which status to return: DENIED, IN-PROGESS, APPROVED. Each has equal probability of being returned.
 
 1. Create a folder for the git repository
   ```
   $ mkdir ~/github
   $ cd ~/github
   ```
-2. Execute the git clone command:  
+2. Execute the git clone command: 
 
   ```
   $ git clone https://github.com/AndyYuen/permitting-services.git
@@ -110,7 +114,7 @@ Ensure you can login into business central
   ```
   $ cd ~/github
   ```
-2. Execute the git clone command:  
+2. Execute the git clone command: 
 
   ```
   $ git clone https://github.com/AndyYuen/permitting-ui.git
@@ -155,7 +159,7 @@ You need to change it to point to you mail server instead.
 
 Here is a screenshot of the Work Item Handler config:
 ![email Work item Handler](images/emailWorkItemHandler.png "email Work item Handler")
-
+https://github.com/AndyYuen/permitting-ui
 
 ## 4.7. Run the UI.
 
@@ -173,7 +177,25 @@ Show Task List
 Show Task Form to Action
 ![Task Form](images/ui-taskForm.png "Task Form")
 
+The parmeters in the forms are described below:
+
+| Parameter | Mandatary | Description |
+| --- | --- | --- |
+| HOA Date | Yes | The date for HOA in format 2019-05-30T12:30:00. The check for whether a representative has been assigned is set at 1 day before the HOA Date. if TEST is specified, the check will be set at 45 seconds from now. |
+| HOA Address | No | Address at which the HOA is to be held. |
+| HOA Representative | No | This will be set within the business process. |
+| HOA Group | No | the group for the users of this application. Default is "rep". |
+| Application Status | NO | Unused. |
+| Applicant Name | Yes | Name of applicant. |
+| Applicant Email Address | No | Email address of applicant. |
+| Applicant Phone Number | No | Phone number of applicant. |
+| Applicant Address | No | Address of applicant. |
+| HOA Approved | No | This will be set within the business process. |
+| Representative If Unassigned | No | Default is "representative". |
+| Email of Representative If Unassigned | Yes | Email of nominated representative. Otherwise, the email will be sent to me. |
+| Status Check Delay | No | Time between each getPermitRequestStatus check. | 
+
 A private video on the UI in action can be found in the link below.
 
-
+https://drive.google.com/drive/u/0/folders/1heBmA55_dB0FgbUicGtZLF1mhHgXMz_9
 .
