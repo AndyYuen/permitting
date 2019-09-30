@@ -6,12 +6,12 @@
 * If by one week prior to the HOA meeting no one from the sales department accepts the task, then the task is reassigned to an executive and an email is sent out.
 * The HOA’s approval or denial of a solar installation request takes place at the HOA meeting that the Solar Village sales representative attends.
 * For a residential solar installation, the following government permits are required:
-** Residential electric permit
-** Residential structural permit
+ * Residential electric permit
+ * Residential structural permit
 * Fortunately, all government agencies provide remote online services that:
-** Accept new permit requests (for example, using HTTP PUT or HTTP POST)
-** Provide the status (such as APPROVED, DENIED, IN_PROGRESS) of that permit request (for example, using HTTP GET)
-** Allow for cancellation of that permit request (for example, using HTTP DELETE)
+ * Accept new permit requests (for example, using HTTP PUT or HTTP POST)
+ * Provide the status (such as APPROVED, DENIED, IN_PROGRESS) of that permit request (for example, using HTTP GET)
+ * Allow for cancellation of that permit request (for example, using HTTP DELETE)
 * The application for both electrical and structural permits can occur in parallel after approval from the HOA.
 * If one of the permits is approved but the other is denied, then the approved permit must be rescinded.
 * Once approvals from the HOA and both government agencies are received, the new order permitting business process is considered complete.
