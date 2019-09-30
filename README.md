@@ -1,5 +1,20 @@
-# 1. Solar Village
-This is a home work assignment.
+# 1. Solar Village Business Process
+* Due to legacy bureaucratic red-tape with government permitting agencies, the life span of a new order permitting business process instance is typically several weeks.
+* Many residences are members of a homeowner’s association, or HOA. For these residences:
+* The HOA must approve any solar installation.
+* Solar Village company policy requires a Solar Village representative from the sales department to attend an HOA meeting.
+* If by one week prior to the HOA meeting no one from the sales department accepts the task, then the task is reassigned to an executive and an email is sent out.
+* The HOA’s approval or denial of a solar installation request takes place at the HOA meeting that the Solar Village sales representative attends.
+* For a residential solar installation, the following government permits are required:
+** Residential electric permit
+** Residential structural permit
+* Fortunately, all government agencies provide remote online services that:
+** Accept new permit requests (for example, using HTTP PUT or HTTP POST)
+** Provide the status (such as APPROVED, DENIED, IN_PROGRESS) of that permit request (for example, using HTTP GET)
+** Allow for cancellation of that permit request (for example, using HTTP DELETE)
+* The application for both electrical and structural permits can occur in parallel after approval from the HOA.
+* If one of the permits is approved but the other is denied, then the approved permit must be rescinded.
+* Once approvals from the HOA and both government agencies are received, the new order permitting business process is considered complete.
 
 # 2. Environment
 This POC uses the Red Hat Process Automation Manager (RHPAM) 7.3.0.GA running on JBOSS EAP 7.2 on a VM.
@@ -7,7 +22,7 @@ This POC uses the Red Hat Process Automation Manager (RHPAM) 7.3.0.GA running on
 It is assumed that the customer has already set up a working RHPAM environment with Business Central and Kie-server.
 
 # 3. Scope changes
-Following the assignment story line, the Consultant had an agreement with the customer on the POC scope changes. They are:
+Following the story line, the Consultant had an agreement with the customer on the POC scope changes. They are:
 ## 3.1 Use of RHPAM Data Modeller to re-create the Domain Model
 The reasoning behind this decision is that the Solar Village domain model for the POC is so simple, it is just as simple to duplicate it in Business Central's Data Modeller. At the same time, the customer is happy to be introduced to use a new tool.
 
